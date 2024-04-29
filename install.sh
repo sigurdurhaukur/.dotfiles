@@ -1,4 +1,3 @@
-
 # check sudo
 
 if [ "$EUID" -ne 0 ]
@@ -19,7 +18,7 @@ if [ "$(uname)" == "Darwin" ]; then
 
   # install required packages
   
-  brew install git wget curl stow zsh nvim
+  brew install git wget curl stow zsh neovim
 
   # install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -27,7 +26,7 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   # install required packages
-  apt-get install git wget curl stow zsh nvim
+  apt-get install git wget curl stow zsh neovim
 
   # install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
