@@ -31,17 +31,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   # install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-  # Install Oh My Zsh and automatically answer 'Yes' to change the default shell
-  echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-  # Explicitly change the default shell to Zsh
-  chsh -s $(which zsh)
-
-  # Optionally: Inform the user to log out and log back in
-  echo "Installation complete. Please log out and log back in for the default shell change to take effect, or start a new Zsh shell manually."
-
-  # Start a new Zsh shell
-  exec zsh
 fi
 
 # clone dotfiles
