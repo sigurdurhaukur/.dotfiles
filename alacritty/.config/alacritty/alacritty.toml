@@ -1,0 +1,23 @@
+live_config_reload = true
+
+[font]
+size = 16.0
+
+[font.bold]
+family = "FiraMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraMono Nerd Font"
+style = "Italic"
+
+[font.italic]
+family = "FiraMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraMono Nerd Font"
+style = "Regular"
+
+[window]
+decorations = "None"
