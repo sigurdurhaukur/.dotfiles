@@ -18,12 +18,12 @@ if [ "$(uname)" == "Darwin" ]; then
 
   # install required packages
   
-  brew install git wget curl stow zsh neovim
+  brew install git wget curl stow zsh neovim ripgrep
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   # install required packages
-  apt-get install git wget curl stow zsh neovim
+  apt-get install git wget curl stow zsh neovim ripgrep
 
   
 

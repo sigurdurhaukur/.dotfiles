@@ -1,5 +1,3 @@
-local mapkey = require("util.keymapper").mapkey
-
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*",
