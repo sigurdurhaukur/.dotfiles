@@ -20,16 +20,12 @@ if [ "$(uname)" == "Darwin" ]; then
   
   brew install git wget curl stow zsh neovim
 
-  # install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   # install required packages
   apt-get install git wget curl stow zsh neovim
 
-  # install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  
 
 fi
 
@@ -40,3 +36,6 @@ git clone https://github.com/sigurdurhaukur/.dotfiles.git ~/.dotfiles
 # stow dotfiles
 stow -d ~/.dotfiles -t ~ nvim
 
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
