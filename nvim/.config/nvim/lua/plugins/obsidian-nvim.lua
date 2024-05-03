@@ -20,16 +20,20 @@ return {
 		daily_notes = {
 			folder = vim.fn.expand("~") .. "/Documents/brain/2 areas/daily-notes",
 		},
-		completion = {
-			new_notes_location = "current_dir",
-		},
 		attatchments = {
 			img_folder = vim.fn.expand("~") .. "/Documents/brain/6 attachments",
 		},
 
+    -- put new notes in the inbox
+    notes_subdir = "8 inbox",
+    new_notes_location = "notes_subdir",
+
+    -- control how links are displayed
+    wiki_link_func = "prepend_note_id", -- [foo-bar|foo bar]
+
 		note_id_func = function(title)
 			local suffix = ""
-			local current_datetime = os.date("!%Y-%m-%d-%H%M%S")
+			local current_datetime = os.date("!%Y-%m-%d")
 			if title ~= nil then
 				-- If title is given, transform it into valid file name.
 				suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
