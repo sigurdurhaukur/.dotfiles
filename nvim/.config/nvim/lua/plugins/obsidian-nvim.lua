@@ -18,7 +18,7 @@ return {
 			},
 		},
 		daily_notes = {
-			folder = vim.fn.expand("~") .. "/Documents/brain/2 areas/daily-notes",
+			folder = "2 areas/daily-notes",
 		},
 		attatchments = {
 			img_folder = vim.fn.expand("~") .. "/Documents/brain/6 attachments",
