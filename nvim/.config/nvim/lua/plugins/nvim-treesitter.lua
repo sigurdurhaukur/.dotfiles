@@ -1,3 +1,4 @@
+-- if ur getting errors with treesitter, try running :TSUpdate in nvim
 local config = function()
 	require("nvim-treesitter.configs").setup({
 		build = ":TSUpdate",
@@ -12,7 +13,6 @@ local config = function()
 			"BufNewFile",
 		},
 		ensure_installed = {
-			"rust",
 			"markdown",
 			"json",
 			"javascript",
@@ -24,12 +24,8 @@ local config = function()
 			"bash",
 			"lua",
 			"dockerfile",
-			"solidity",
 			"gitignore",
 			"python",
-			"vue",
-			"svelte",
-			"toml",
 		},
 		auto_install = true,
 		highlight = {

@@ -62,10 +62,11 @@ local config = function()
 	lspconfig.tsserver.setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
-		filetypes = {
-			"typescript",
+		init_options = {
+			preferences = {
+				disableSuggestions = true,
+			},
 		},
-		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
 	})
 
 	-- bash
