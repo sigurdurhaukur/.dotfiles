@@ -22,6 +22,7 @@ vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
 vim.keymap.set("v", ">", ">gv", { silent = true, noremap = true })
 
 -- Obsidian nvim
+vim.keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>oo", ":ObsidianOpen<CR>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>os", ":ObsidianSearch<CR>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>ot", ":ObsidianToday<CR>", { silent = true, noremap = true })
