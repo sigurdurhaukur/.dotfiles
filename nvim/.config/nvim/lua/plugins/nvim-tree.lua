@@ -10,6 +10,9 @@ return {
 			actions = {
 				open_file = { quit_on_open = true },
 			},
+      git = {
+        ignore = false, -- do show files in gitignore
+      }
 		})
 	end,
 }
