@@ -58,17 +58,6 @@ local config = function()
 		},
 	})
 
-	-- typescript
-	lspconfig.tsserver.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-		init_options = {
-			preferences = {
-				disableSuggestions = true,
-			},
-		},
-	})
-
 	-- bash
 	lspconfig.bashls.setup({
 		capabilities = capabilities,
@@ -76,12 +65,6 @@ local config = function()
 		filetypes = { "sh" },
 	})
 
-	-- solidity
-	lspconfig.solidity.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		filetypes = { "solidity" },
-	})
 
 	-- html, typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
 	lspconfig.emmet_ls.setup({

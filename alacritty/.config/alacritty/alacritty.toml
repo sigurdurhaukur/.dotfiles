@@ -1,5 +1,8 @@
 live_config_reload = true
 
+[env]
+TERM = "xterm-256color"
+
 [font]
 size = 16.0
 
@@ -21,3 +24,4 @@ style = "Regular"
 
 [window]
 decorations = "None"
+# opacity = 0.95
