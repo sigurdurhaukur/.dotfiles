@@ -19,11 +19,12 @@ if [ "$(uname)" == "Darwin" ]; then
   # install required packages
   
   brew install git wget curl stow zsh neovim ripgrep
+  brew install --cask emacs
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
   # install required packages
-  apt-get install git wget curl stow zsh neovim ripgrep
+  apt-get install git wget curl stow zsh neovim ripgrep emacs
 
   
 
@@ -31,10 +32,22 @@ fi
 
 # clone dotfiles
 
-git clone https://github.com/sigurdurhaukur/.dotfiles.git ~/.dotfiles
+if [ -d ~/.dotfiles/.git ]; then
+  git -C ~/.dotfiles pull
+else
+  git clone https://github.com/sigurdurhaukur/.dotfiles.git ~/.dotfiles
+fi
 
 # stow dotfiles
 stow -d ~/.dotfiles -t ~ nvim
+
+# install spacemacs (config is stowed from emacs/.spacemacs)
+if [ ! -d ~/.emacs.d ]; then
+  git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+else
+  git -C ~/.emacs.d pull
+fi
+stow -d ~/.dotfiles -t ~ emacs
 
 
 # install oh-my-zsh
